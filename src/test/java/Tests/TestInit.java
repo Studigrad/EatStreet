@@ -1,4 +1,4 @@
-package tests;
+package Tests;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,6 +15,7 @@ public abstract class TestInit {
     public void openBrowser() {
         WebDriverManager.chromedriver().setup();
         driver.set(new ChromeDriver());
+        driver.get().get("https://eatstreet.com");
     }
 
     public WebDriver getDriver(){
