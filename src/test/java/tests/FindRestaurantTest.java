@@ -4,11 +4,12 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SearchPage;
 
-public class FindRestaurantTest extends TestInit{
+public class FindRestaurantTest extends Tests.TestInit {
     @Test
     public void enterRestaurantAddress(){
         HomePage homePage = new HomePage(getDriver());
         SearchPage searchPage = new SearchPage(getDriver());
+        homePage.enterYourEmailAddressField();
 
     }
 }
