@@ -9,6 +9,10 @@ import pages.HomePage;
 import pages.SearchPage;
 
 public class FindRestaurantTest extends TestInit{
+
+    /**
+     * this test enter address in search field and finds all restaurant by that address
+     */
     @Test
     public void enterRestaurantAddress(){
         WebDriver dr = getDriver();
