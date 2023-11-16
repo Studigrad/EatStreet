@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SearchPage;
 
+
 public class FindRestaurantTest extends TestInit{
 
     /**

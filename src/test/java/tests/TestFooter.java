@@ -1,6 +1,9 @@
 package tests;
 
 
+public class TestFooter extends TestInit{
+
+
 import components.Footer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +21,6 @@ public class TestFooter extends TestInit {
 
     }
 
-public class TestFooter extends tests.TestInit{
 
 
 }
