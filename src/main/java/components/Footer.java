@@ -1,10 +1,9 @@
 package components;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import pages.BasePage;
+import pages.PrivacyPolicyPage;
 
 
 import org.openqa.selenium.By;
@@ -78,27 +77,32 @@ public class Footer extends BasePage {
         return findByXpath("//a[@class='app-btn-iphone']");
     }
 
-    public Footer clickPrivacyPolicyBtn() {
+    public PrivacyPolicyPage clickPrivacyPolicyBtn() {
         privacyPolicyBtn().click();
-        return this;
+        return new PrivacyPolicyPage(driver);
+
     }
 
     public Footer clickTermsOfUseBtn() {
         termsOfUseBtn().click();
         return this;
     }
+
     public Footer clickDoNotSellOrShareMyPersonalInformationBtn() {
         doNotSellOrShareMyPersonalInformationBtn().click();
         return this;
     }
+
     public Footer clickRestaurantTermsBtn() {
         restaurantTermsBtn().click();
         return this;
     }
+
     public Footer clickGooglePlayBtn() {
         googlePlayBtn().click();
         return this;
     }
+
     public Footer clickAppStoreBtn() {
         appStoreBtn().click();
         return this;
