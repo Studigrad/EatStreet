@@ -3,6 +3,7 @@ package components;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.BasePage;
+import pages.PrivacyPolicyPage;
 
 public class Footer extends BasePage {
     public Footer(WebDriver driver) {
@@ -34,28 +35,33 @@ public class Footer extends BasePage {
         return findByXpath("//a[@class='app-btn-iphone']");
     }
 
-    public Footer clikPrivacyPolicyBtn() {
+    public PrivacyPolicyPage clickPrivacyPolicyBtn() {
         privacyPolicyBtn().click();
-        return this;
+        return new PrivacyPolicyPage(driver);
+
     }
 
-    public Footer clikTermsOfUseBtn() {
+    public Footer clickTermsOfUseBtn() {
         termsOfUseBtn().click();
         return this;
     }
-    public Footer clikDoNotSellOrShareMyPersonalInformationBtn() {
+
+    public Footer clickDoNotSellOrShareMyPersonalInformationBtn() {
         doNotSellOrShareMyPersonalInformationBtn().click();
         return this;
     }
-    public Footer clikRestaurantTermsBtn() {
+
+    public Footer clickRestaurantTermsBtn() {
         restaurantTermsBtn().click();
         return this;
     }
-    public Footer clikGooglePlayBtn() {
+
+    public Footer clickGooglePlayBtn() {
         googlePlayBtn().click();
         return this;
     }
-    public Footer clikAppStoreBtn() {
+
+    public Footer clickAppStoreBtn() {
         appStoreBtn().click();
         return this;
     }
