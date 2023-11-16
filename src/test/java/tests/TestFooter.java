@@ -1,5 +1,6 @@
 package tests;
 
+
 import components.Footer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,5 +17,8 @@ public class TestFooter extends TestInit {
         Thread.sleep(5000);
 
     }
+
+public class TestFooter extends tests.TestInit{
+
 
 }
