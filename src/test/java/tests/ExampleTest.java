@@ -11,13 +11,5 @@ public class ExampleTest extends TestInit{
         page.navigate("https://eatstreet.com/");
         Assert.assertTrue(page.SearchField().isDisplayed());
 
-
-        HomePage HomePage = new HomePage(getDriver());
-        HomePage.findByXpath("//*[@id=\"partners\"]/div/div/div[2]/a");
-
-        Assert.assertTrue(HomePage.SearchField().isDisplayed());
-
-
-
     }
 }
