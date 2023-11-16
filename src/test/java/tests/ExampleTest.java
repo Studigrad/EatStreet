@@ -9,13 +9,13 @@ public class ExampleTest extends TestInit{
     public void testHomePage(){
         HomePage page = new HomePage(getDriver());
         page.navigate("https://eatstreet.com/");
-        Assert.assertTrue(page.findSearchField().isDisplayed());
+        Assert.assertTrue(page.SearchField().isDisplayed());
 
 
         HomePage HomePage = new HomePage(getDriver());
         HomePage.findByXpath("//*[@id=\"partners\"]/div/div/div[2]/a");
 
-        Assert.assertTrue(HomePage.findSearchField().isDisplayed());
+        Assert.assertTrue(HomePage.SearchField().isDisplayed());
 
 
 
