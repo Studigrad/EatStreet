@@ -34,28 +34,28 @@ public class Footer extends BasePage {
         return findByXpath("//a[@class='app-btn-iphone']");
     }
 
-    public Footer clikPrivacyPolicyBtn() {
+    public Footer clickPrivacyPolicyBtn() {
         privacyPolicyBtn().click();
         return this;
     }
 
-    public Footer clikTermsOfUseBtn() {
+    public Footer clickTermsOfUseBtn() {
         termsOfUseBtn().click();
         return this;
     }
-    public Footer clikDoNotSellOrShareMyPersonalInformationBtn() {
+    public Footer clickDoNotSellOrShareMyPersonalInformationBtn() {
         doNotSellOrShareMyPersonalInformationBtn().click();
         return this;
     }
-    public Footer clikRestaurantTermsBtn() {
+    public Footer clickRestaurantTermsBtn() {
         restaurantTermsBtn().click();
         return this;
     }
-    public Footer clikGooglePlayBtn() {
+    public Footer clickGooglePlayBtn() {
         googlePlayBtn().click();
         return this;
     }
-    public Footer clikAppStoreBtn() {
+    public Footer clickAppStoreBtn() {
         appStoreBtn().click();
         return this;
     }
