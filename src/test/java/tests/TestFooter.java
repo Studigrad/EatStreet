@@ -1,5 +1,5 @@
 package tests;
 
-public class TestFooter extends tests.TestInit{
+public class TestFooter extends TestInit{
 
 }
