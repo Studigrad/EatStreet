@@ -2,13 +2,13 @@ package tests;
 
 import components.ModalWindow;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SearchPage;
 
 public class FindRestaurantTest extends TestInit{
+
     /**
      * this test enter address in search field and finds all restaurant by that address
      */

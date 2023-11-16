@@ -65,7 +65,7 @@ public class HomePage extends BasePage {
     }
 
     public WebElement bloomingtonIN(){
-        return findByXpath("//a[@href=\"/bloomington-in/home"]");
+        return findByXpath("//a[@href=\"/bloomington-in/home\"]");
     }
 
     public WebElement indianapolisIN(){
