@@ -1,7 +1,7 @@
 package tests;
 
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -15,6 +15,7 @@ public abstract class TestInit {
     public void openBrowser() {
         WebDriverManager.chromedriver().setup();
         driver.set(new ChromeDriver());
+        driver.get().get("https://eatstreet.com");
     }
 
     public WebDriver getDriver(){
