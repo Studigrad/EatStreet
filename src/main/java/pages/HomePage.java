@@ -51,6 +51,9 @@ public class HomePage extends BasePage {
     public WebElement signUpButton(){
         return findByXpath("//button[@type=\"submit\"]");
     }
+    public void findInSearchField(String text){
+        searchField().sendKeys(text+"\n");
+    }
 
     // Ресторани
 
