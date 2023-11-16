@@ -1,7 +1,7 @@
 package tests;
 
 import org.testng.annotations.Test;
-import HomePage;
+import pages.HomePage;
 import pages.SearchPage;
 
 public class FindRestaurantTest extends TestInit{
