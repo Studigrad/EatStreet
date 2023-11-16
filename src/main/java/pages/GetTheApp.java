@@ -34,7 +34,7 @@ public class GetTheApp extends BasePage{
 
     public GetTheApp IphoneBtn(){
         iphone().click();
-        return this;git
+        return this;
     }
     public GetTheApp AndroidBtn(){
         android().click();
