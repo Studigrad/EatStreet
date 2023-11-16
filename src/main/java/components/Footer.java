@@ -1,12 +1,56 @@
 package components;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pages.BasePage;
 
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import pages.*;
+
+
 public class Footer extends BasePage {
+
     public Footer(WebDriver driver) {
         super(driver);
+    }
+
+    public WebElement forCustomersButtom() {
+        return findByXpath("//a[@href='https://eatst.force.com/customers']");
+    }
+
+    public WebElement restaurantDashboardButtom() {
+        return findByXpath("//a[@ng-click='linkToDashboardSupport()']");
+    }
+
+    public WebElement getEatStreetButtom() {
+        return findByXpath("//a[@target = '_blank'][@href='http://geteatstreet.com/']");
+    }
+
+    public WebElement getHelpButton() {
+        return findByXpath("//a[@ng-click='getHelp()'][text()='Get Help']");
+    }
+
+    public CustomersPage clickforCustomers() {
+        forCustomersButtom().click();
+        return new CustomersPage();
+    }
+
+    public RestaurantDashboardPage clickRestaurantDashboard(){
+      restaurantDashboardButtom().click();
+      return  new RestaurantDashboardPage();
+    }
+    public GetEatStreetPage clickGetEatStreet(){
+        getEatStreetButtom().click();
+        return new GetEatStreetPage();
+    }
+    public GetHelpPage clickGetHelpButton(){
+        getHelpButton().click();
+        return new GetHelpPage();
     }
 
     public WebElement privacyPolicyBtn() {
@@ -34,29 +78,30 @@ public class Footer extends BasePage {
         return findByXpath("//a[@class='app-btn-iphone']");
     }
 
-    public Footer clikPrivacyPolicyBtn() {
+    public Footer clickPrivacyPolicyBtn() {
         privacyPolicyBtn().click();
         return this;
     }
 
-    public Footer clikTermsOfUseBtn() {
+    public Footer clickTermsOfUseBtn() {
         termsOfUseBtn().click();
         return this;
     }
-    public Footer clikDoNotSellOrShareMyPersonalInformationBtn() {
+    public Footer clickDoNotSellOrShareMyPersonalInformationBtn() {
         doNotSellOrShareMyPersonalInformationBtn().click();
         return this;
     }
-    public Footer clikRestaurantTermsBtn() {
+    public Footer clickRestaurantTermsBtn() {
         restaurantTermsBtn().click();
         return this;
     }
-    public Footer clikGooglePlayBtn() {
+    public Footer clickGooglePlayBtn() {
         googlePlayBtn().click();
         return this;
     }
-    public Footer clikAppStoreBtn() {
+    public Footer clickAppStoreBtn() {
         appStoreBtn().click();
         return this;
     }
 }
+

@@ -1,5 +1,6 @@
 package pages;
 
+import components.Footer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.BasePage;
@@ -8,9 +9,7 @@ public class HomePage extends BasePage {
     public HomePage(WebDriver driver){
         super(driver);
     }
-    public WebElement searchField(){
-        return findByXpath("//input[@placeholder=\"Enter Your Address\"]");  // Пошукове поле
-    }
+
 
     public WebElement partnerWithUsLearnMore(){
         return findByXpath("//a[@href=\"http://geteatstreet.com/?_gl=1*yy012k*_ga*MTIxMDM3MDA3LjE2OTk5NjQ2NTg.*_ga_0Q57ZKP42S*MTcwMDEyNzk2Ny4xMC4xLjE3MDAxMjgwMjYuMC4wLjA.\"]");
@@ -528,5 +527,6 @@ public class HomePage extends BasePage {
     public WebElement laramieWY(){
         return findByXpath("//a[@href=\"/laramie-wy/home\"]");
     }
+
 
 }
