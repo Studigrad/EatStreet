@@ -1,20 +1,19 @@
 package tests;
 
 import components.Footer;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.PrivacyPolicyPage;
 
 public class TestFooter extends TestInit {
     @Test
-    public void legal() throws InterruptedException {
-
+    public void checkPrivacyPolicyInSectionLegal() {
         Footer footer = new Footer(getDriver());
+        PrivacyPolicyPage privacyPolicyPage = new PrivacyPolicyPage(getDriver());
         footer.scroll(3000);
         footer.clickPrivacyPolicyBtn();
-        Thread.sleep(5000);
 
+
+        Assert.assertTrue(privacyPolicyPage.textEatStreetPrivacyPolicy().getText().contains("EatStreet Privacy Policy"));
     }
-
 }
