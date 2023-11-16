@@ -27,4 +27,10 @@ public class FindRestaurantTest extends TestInit{
         //Assert.assertEquals(searchPage.matchingResult().getText(),"matching restaurants near you");
         Assert.assertTrue(searchPage.matchingResult().getText().contains("matching restaurants near you"));
     }
+    @Test
+    public void chooseRestaurant(){
+        WebDriver dr = getDriver();
+        SearchPage searchPage = new SearchPage(dr);
+
+    }
 }
