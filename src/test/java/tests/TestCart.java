@@ -10,7 +10,6 @@ public class TestCart extends TestInit {
     public void checkCart(){
             HomePage page = new HomePage(getDriver());
             Assert.assertTrue(page.getCheckCart().isDisplayed());
-
             page.getCheckCart().click();
             CartPage cartPage = new CartPage(getDriver());
             Assert.assertTrue(cartPage.getCheckCartStatus().isDisplayed());

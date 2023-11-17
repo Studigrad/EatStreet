@@ -2,9 +2,12 @@ package components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pages.*;
+import pages.BasePage;
+import pages.footerPages.CustomersPage;
+import pages.footerPages.GetEatStreetPage;
+import pages.footerPages.GetHelpPage;
+import pages.footerPages.RestaurantDashboardPage;
 import pages.footerPages.PrivacyPolicyPage;
-import pages.footerPages.TermsOfUsePage;
 
 
 public class Footer extends BasePage {
@@ -14,7 +17,7 @@ public class Footer extends BasePage {
     }
 
     public WebElement forCustomersButtom() {
-        return findByXpath("//a[@href='https://eatst.force.com/customers']");
+        return findByXpath("//a[text()='For Customers']");
     }
 
     public WebElement restaurantDashboardButtom() {
@@ -29,25 +32,7 @@ public class Footer extends BasePage {
         return findByXpath("//a[@ng-click='getHelp()'][text()='Get Help']");
     }
 
-    public CustomersPage clickforCustomers() {
-        forCustomersButtom().click();
-        return new CustomersPage();
-    }
 
-    public RestaurantDashboardPage clickRestaurantDashboard() {
-        restaurantDashboardButtom().click();
-        return new RestaurantDashboardPage();
-    }
-
-    public GetEatStreetPage clickGetEatStreet() {
-        getEatStreetButtom().click();
-        return new GetEatStreetPage();
-    }
-
-    public GetHelpPage clickGetHelpButton() {
-        getHelpButton().click();
-        return new GetHelpPage();
-    }
 
     public WebElement privacyPolicyBtn() {
         return findByXpath("//a[@ui-sref='privacy']");
@@ -75,39 +60,55 @@ public class Footer extends BasePage {
     }
 
     public PrivacyPolicyPage clickPrivacyPolicyBtn() {
-        scroll(3000);
         privacyPolicyBtn().click();
         return new PrivacyPolicyPage(driver);
+
     }
 
-    public TermsOfUsePage clickTermsOfUseBtn() {
-        scroll(3000);
+    public Footer clickTermsOfUseBtn() {
         termsOfUseBtn().click();
-        return new TermsOfUsePage(driver);
+        return this;
     }
 
-    public PrivacyPolicyPage clickDoNotSellOrShareMyPersonalInformationBtn() {
-        scroll(3000);
+    public Footer clickDoNotSellOrShareMyPersonalInformationBtn() {
         doNotSellOrShareMyPersonalInformationBtn().click();
-        return new PrivacyPolicyPage(driver);
+        return this;
     }
 
     public Footer clickRestaurantTermsBtn() {
-        scroll(3000);
         restaurantTermsBtn().click();
         return this;
     }
 
     public Footer clickGooglePlayBtn() {
-        scroll(3000);
         googlePlayBtn().click();
         return this;
     }
 
     public Footer clickAppStoreBtn() {
-        scroll(3000);
         appStoreBtn().click();
         return this;
     }
+
+    public CustomersPage clickforCustomers() {
+        forCustomersButtom().click();
+        return new CustomersPage(driver);
+    }
+
+    public RestaurantDashboardPage clickRestaurantDashboard(){
+      restaurantDashboardButtom().click();
+      return new RestaurantDashboardPage();
+    }
+
+    public GetEatStreetPage clickGetEatStreet(){
+        getEatStreetButtom().click();
+        return new GetEatStreetPage();
+    }
+    public GetHelpPage clickGetHelpButton(){
+        getHelpButton().click();
+        return new GetHelpPage();
+    }
+
+
 }
 
