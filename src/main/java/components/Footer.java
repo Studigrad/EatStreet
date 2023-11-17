@@ -7,7 +7,9 @@ import pages.footerPages.CustomersPage;
 import pages.footerPages.GetEatStreetPage;
 import pages.footerPages.GetHelpPage;
 import pages.footerPages.RestaurantDashboardPage;
-import pages.PrivacyPolicyPage;
+
+import pages.footerPages.PrivacyPolicyPage;
+
 
 
 public class Footer extends BasePage {
@@ -108,7 +110,6 @@ public class Footer extends BasePage {
         getHelpButton().click();
         return new GetHelpPage();
     }
-
 
 }
 
