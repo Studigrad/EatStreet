@@ -80,7 +80,7 @@ public class GetTheApp extends BasePage{
 
 
     public GetTheApp Opensite(){
-        scroll(500);
+        scroll(470);
         site().click();
         return this;
     }

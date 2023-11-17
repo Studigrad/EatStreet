@@ -11,7 +11,8 @@ public class GetTheAppTest extends TestInit{
     GetTheApp appGet = new GetTheApp(getDriver());
     appGet.Opensite()
             .textVisible();
-    Assert.assertEquals(appGet.textVisible(), "Food in a Snap of the App!");
+    Assert.assertEquals(appGet.textVisible(), "Food in a Snap of the App!" +
+            "Download it now!");
   }
 
   @Test
