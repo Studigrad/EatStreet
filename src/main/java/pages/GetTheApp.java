@@ -71,14 +71,6 @@ public class GetTheApp extends BasePage{
         link().click();
         return this;
     }
-
-
-
-
-
-
-
-
     public GetTheApp Opensite(){
         scroll(470);
         site().click();

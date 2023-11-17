@@ -15,18 +15,6 @@ public class GetTheAppTest extends TestInit{
     Assert.assertEquals(appGet.textVisible(), "Food in a Snap of the App!");
   }
 
-    public void getApp(){
-      GetTheApp app = new GetTheApp(getDriver());
-      app.scroll(500);
-
-          app.OpenLink();
-            app.IphoneBtn()
-                .AndroidBtn()
-                .ReceiveSMSNotification()
-                .PhoneNumber()
-                .TextPhoneLink();
-
-  
   @Test
   public void getAppiPhonebutton(){
     GetTheApp appGet = new GetTheApp(getDriver());
@@ -58,12 +46,12 @@ public class GetTheAppTest extends TestInit{
             .TextLinkBtn();
   }
   @Test
-    public void getAppTextBtnCheck(){
-      GetTheApp app = new GetTheApp(getDriver());
-      app.Opensite()
-              .GetTextFromIphoneBtn();
-      Assert.assertEquals(app.iphoneTextBtnText(), "Text iPhone Link");
-      app.GetTextFromAndroid();
-      Assert.assertEquals(app.androidTextBtntext(), "Text Android Link");
-    }
+  public void getAppTextBtnCheck(){
+    GetTheApp app = new GetTheApp(getDriver());
+    app.Opensite()
+            .GetTextFromIphoneBtn();
+    Assert.assertEquals(app.iphoneTextBtnText(), "Text iPhone Link");
+    app.GetTextFromAndroid();
+    Assert.assertEquals(app.androidTextBtntext(), "Text Android Link");
+  }
 }
