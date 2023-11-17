@@ -13,9 +13,11 @@ import java.util.List;
 public class BasePage {
 
     public WebDriver driver;
+    public WebDriverWait wait;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void navigate(String link) {
@@ -23,16 +25,15 @@ public class BasePage {
     }
 
     public WebElement findByXpath(String path) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(path)));
     }
 
     public List<WebElement> findsByXpath(String path) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(path)));
     }
     public void scroll(int pixels) {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("window.scrollBy(0," + pixels + ")", "");
     }
+
 }

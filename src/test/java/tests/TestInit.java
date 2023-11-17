@@ -1,29 +1,33 @@
 package tests;
 
+import components.TermsOfUse;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public abstract class TestInit {
 
     public ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    @BeforeMethod
+    @BeforeTest
     public void openBrowser() {
         WebDriverManager.chromedriver().setup();
         driver.set(new ChromeDriver());
-        driver.get().get("https://eatstreet.com");
-        driver.get().manage().window().maximize();
+
+        getDriver().manage().window().maximize();
+        getDriver().get("https://eatstreet.com");
+
+        TermsOfUse terms = new TermsOfUse(getDriver());
+        terms.acceptBtn();
     }
 
     public WebDriver getDriver(){
         return driver.get();
     }
 
-    @AfterMethod
+    @AfterTest
     public void closeBrowser(){
         getDriver().quit();
     }
