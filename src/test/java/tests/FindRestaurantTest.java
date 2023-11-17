@@ -39,6 +39,16 @@ public class FindRestaurantTest extends TestInit{
                     .contains("matching restaurants near you"));
     }
     @Test(dependsOnMethods = "checkOrderFor")
+    public void checkSortBy(){
+        searchPage.clickSortByBtn();
+        searchPage.scroll(200);
+        searchPage.clickSortByElementByIndex(4);
+        Assert.assertTrue(searchPage.getRestaurantByIndex(1).isDisplayed());
+        searchPage.clickSortByBtn();
+        searchPage.clickSortByElementByIndex(1);
+        Assert.assertEquals(searchPage.getRestaurantByIndex(2).getText().toLowerCase().charAt(0),'a');
+    }
+    @Test(dependsOnMethods = "checkSortBy")
     public void checkFilterSection(){
         searchPage.clickOrderForRadioBtn(1);
         searchPage.scroll(150);
@@ -49,10 +59,12 @@ public class FindRestaurantTest extends TestInit{
                 .getText()
                 .contains("matching"));
     }
+
+
     @Test(dependsOnMethods = "checkFilterSection")
     public void checkChooseRestaurant() {
         searchPage.scroll(50);
-        searchPage.chooseRestaurantByIndex(1);
+        searchPage.getRestaurantByIndex(1).click();
     }
 
 }
