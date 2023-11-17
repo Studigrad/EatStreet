@@ -25,10 +25,13 @@ public class FindRestaurantTest extends TestInit{
         modal.clickBtn(modal.getEnterAddressBtn());
         homePage.getFedButton().click();
 
-        Assert.assertTrue(searchPage.matchingResult().getText().contains("matching restaurants near you"));
+        Assert.assertTrue(searchPage
+                .matchingResult()
+                .getText()
+                .contains("matching restaurants near you"));
     }
     @Test(dependsOnMethods = "enterRestaurantAddress")
-    public void checkOrderFor() throws InterruptedException {
+    public void checkOrderFor(){
         searchPage.clickOrderForRadioBtn(2);
         Assert.assertTrue(searchPage
                     .matchingResult()
