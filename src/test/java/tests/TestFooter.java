@@ -3,7 +3,7 @@ package tests;
 import components.Footer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.PrivacyPolicyPage;
+import pages.footerPages.PrivacyPolicyPage;
 
 public class TestFooter extends TestInit {
     @Test
