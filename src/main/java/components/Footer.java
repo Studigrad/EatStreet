@@ -3,7 +3,6 @@ package components;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.*;
-import pages.footerPages.PrivacyPolicyPage;
 import pages.footerPages.TermsOfUsePage;
 
 
