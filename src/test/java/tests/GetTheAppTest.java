@@ -14,18 +14,6 @@ public class GetTheAppTest extends TestInit{
             .textVisible();
     Assert.assertEquals(appGet.textVisible(), "Food in a Snap of the App!");
   }
-
-    public void getApp(){
-      GetTheApp app = new GetTheApp(getDriver());
-      app.scroll(500);
-
-          app.OpenLink();
-            app.IphoneBtn()
-                .AndroidBtn()
-                .ReceiveSMSNotification()
-                .PhoneNumber()
-                .TextPhoneLink();
-
   
   @Test
   public void getAppiPhonebutton(){
