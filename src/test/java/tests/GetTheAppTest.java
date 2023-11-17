@@ -9,6 +9,7 @@ public class GetTheAppTest extends TestInit{
     public void getApp(){
       GetTheApp app = new GetTheApp(getDriver());
       app.scroll(500);
+
           app.OpenLink();
             app.IphoneBtn()
                 .AndroidBtn()

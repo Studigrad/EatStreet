@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.BasePage;
 
+import java.util.List;
+
 public class HomePage extends BasePage {
     public HomePage(WebDriver driver){
         super(driver);
@@ -57,8 +59,11 @@ public class HomePage extends BasePage {
         searchField().sendKeys(text+"\n");
     }
 
-
     public WebElement getCheckCart() {
         return findByXpath("//li[@class=\"is-clickable\"]");
+    }
+
+    public List<WebElement> cityLists(){
+        return findsByXpath("//div[@class=\"cities-list\"]");
     }
 }
