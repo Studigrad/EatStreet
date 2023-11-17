@@ -57,7 +57,6 @@ public class HomePage extends BasePage {
         searchField().sendKeys(text+"\n");
     }
 
-
     public WebElement getCheckCart() {
         return findByXpath("//li[@class=\"is-clickable\"]");
     }

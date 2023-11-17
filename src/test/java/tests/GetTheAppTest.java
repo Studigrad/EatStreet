@@ -8,13 +8,13 @@ public class GetTheAppTest extends TestInit{
   @Test
     public void getApp(){
       GetTheApp app = new GetTheApp(getDriver());
-    app.scroll(500);
-    app.OpenLink();
-            app.IphoneBtn()
-                .AndroidBtn()
-                .ReceiveSMSNotification()
-                .PhoneNumber()
-                .TextPhoneLink();
+      app.scroll(500);
+      app.OpenLink();
+              app.IphoneBtn()
+                  .AndroidBtn()
+                  .ReceiveSMSNotification()
+                  .PhoneNumber()
+                  .TextPhoneLink();
 
     }
 }
