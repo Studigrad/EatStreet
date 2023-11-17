@@ -60,7 +60,6 @@ public class FindRestaurantTest extends TestInit{
                 .contains("matching"));
     }
 
-
     @Test(dependsOnMethods = "checkFilterSection")
     public void checkChooseRestaurant() {
         searchPage.scroll(50);
