@@ -109,6 +109,5 @@ public class Footer extends BasePage {
         return new GetHelpPage();
     }
 
-
 }
 
