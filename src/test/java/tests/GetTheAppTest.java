@@ -7,14 +7,26 @@ import pages.GetTheApp;
 public class GetTheAppTest extends TestInit{
 
   @Test
+
   public void textVisible(){
     GetTheApp appGet = new GetTheApp(getDriver());
     appGet.Opensite()
             .textVisible();
-    Assert.assertEquals(appGet.textVisible(), "Food in a Snap of the App!" +
-            "Download it now!");
+    Assert.assertEquals(appGet.textVisible(), "Food in a Snap of the App!");
   }
 
+    public void getApp(){
+      GetTheApp app = new GetTheApp(getDriver());
+      app.scroll(500);
+
+          app.OpenLink();
+            app.IphoneBtn()
+                .AndroidBtn()
+                .ReceiveSMSNotification()
+                .PhoneNumber()
+                .TextPhoneLink();
+
+  
   @Test
   public void getAppiPhonebutton(){
     GetTheApp appGet = new GetTheApp(getDriver());

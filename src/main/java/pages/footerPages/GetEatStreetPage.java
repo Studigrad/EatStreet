@@ -1,4 +1,4 @@
-package pages;
+package pages.footerPages;
 
 public class GetEatStreetPage {
 }
