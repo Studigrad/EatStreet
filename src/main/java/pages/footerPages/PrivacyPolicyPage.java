@@ -1,16 +1,15 @@
-package pages;
+package pages.footerPages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import pages.BasePage;
 
 public class PrivacyPolicyPage extends BasePage {
-    public WebElement textEatStreetPrivacyPolicy() {
-        return findByXpath("//div[@class='widget-header widget-header--checkout']");
-    }
     public PrivacyPolicyPage(WebDriver driver) {
         super(driver);
     }
 
-
-
+    public WebElement textEatStreetPrivacyPolicy() {
+        return findByXpath("//div[@class='widget-header widget-header--checkout']");
+    }
 }
