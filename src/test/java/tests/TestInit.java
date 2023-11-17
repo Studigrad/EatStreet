@@ -16,6 +16,7 @@ public abstract class TestInit {
         WebDriverManager.chromedriver().setup();
         driver.set(new ChromeDriver());
         driver.get().get("https://eatstreet.com");
+        driver.get().manage().window().maximize();
     }
 
     public WebDriver getDriver(){

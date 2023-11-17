@@ -3,9 +3,11 @@ package tests;
 import components.Footer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.footerPages.AboutUsPage;
 import pages.PrivacyPolicyPage;
 
 public class TestFooter extends TestInit {
+
     @Test
     public void checkPrivacyPolicyInSectionLegal() {
         Footer footer = new Footer(getDriver());
@@ -16,4 +18,3 @@ public class TestFooter extends TestInit {
         Assert.assertTrue(privacyPolicyPage.textEatStreetPrivacyPolicy().getText().contains("EatStreet Privacy Policy"));
     }
 }
-

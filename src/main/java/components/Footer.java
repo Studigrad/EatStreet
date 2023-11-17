@@ -2,15 +2,7 @@ package components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pages.BasePage;
-import pages.PrivacyPolicyPage;
-
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import pages.*;
-
 
 public class Footer extends BasePage {
 
@@ -105,6 +97,16 @@ public class Footer extends BasePage {
 
     public Footer clickAppStoreBtn() {
         appStoreBtn().click();
+        return this;
+    }
+
+    public WebElement getBtnAboutUs() {
+        return findByXpath("//a[@ui-sref='about-us']");
+    }
+
+    public Footer clickAboutUsBtn() {
+        scroll(3000);
+        getBtnAboutUs().click();
         return this;
     }
 }
