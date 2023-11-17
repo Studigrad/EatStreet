@@ -2,15 +2,12 @@ package tests;
 
 import components.TermsOfUse;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
 public abstract class TestInit {
-
     public ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-
     @BeforeTest
     public void openBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -20,14 +17,11 @@ public abstract class TestInit {
         TermsOfUse terms = new TermsOfUse(getDriver());
         terms.acceptBtn();
     }
-
     public WebDriver getDriver(){
         return driver.get();
     }
-
-//    @AfterTest
-//    public void closeBrowser(){
-//        getDriver().quit();
-//    }
-
+    @AfterTest
+    public void closeBrowser(){
+        getDriver().quit();
+    }
 }

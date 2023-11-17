@@ -7,7 +7,6 @@ import pages.GetTheApp;
 public class GetTheAppTest extends TestInit{
 
   @Test
-
   public void textVisible(){
     GetTheApp appGet = new GetTheApp(getDriver());
     appGet.Opensite()
@@ -17,7 +16,10 @@ public class GetTheAppTest extends TestInit{
 
 
 
+
   
+
+
 
   @Test
   public void getAppiPhonebutton(){
