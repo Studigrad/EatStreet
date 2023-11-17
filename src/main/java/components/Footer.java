@@ -3,13 +3,11 @@ package components;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.BasePage;
+import pages.footerPages.CustomersPage;
+import pages.footerPages.GetEatStreetPage;
+import pages.footerPages.GetHelpPage;
+import pages.footerPages.RestaurantDashboardPage;
 import pages.PrivacyPolicyPage;
-
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import pages.*;
 
 
 public class Footer extends BasePage {
@@ -19,7 +17,7 @@ public class Footer extends BasePage {
     }
 
     public WebElement forCustomersButtom() {
-        return findByXpath("//a[@href='https://eatst.force.com/customers']");
+        return findByXpath("//a[text()='For Customers']");
     }
 
     public WebElement restaurantDashboardButtom() {
@@ -34,23 +32,7 @@ public class Footer extends BasePage {
         return findByXpath("//a[@ng-click='getHelp()'][text()='Get Help']");
     }
 
-    public CustomersPage clickforCustomers() {
-        forCustomersButtom().click();
-        return new CustomersPage();
-    }
 
-    public RestaurantDashboardPage clickRestaurantDashboard(){
-      restaurantDashboardButtom().click();
-      return  new RestaurantDashboardPage();
-    }
-    public GetEatStreetPage clickGetEatStreet(){
-        getEatStreetButtom().click();
-        return new GetEatStreetPage();
-    }
-    public GetHelpPage clickGetHelpButton(){
-        getHelpButton().click();
-        return new GetHelpPage();
-    }
 
     public WebElement privacyPolicyBtn() {
         return findByXpath("//a[@ui-sref='privacy']");
@@ -107,5 +89,26 @@ public class Footer extends BasePage {
         appStoreBtn().click();
         return this;
     }
+
+    public CustomersPage clickforCustomers() {
+        forCustomersButtom().click();
+        return new CustomersPage(driver);
+    }
+
+    public RestaurantDashboardPage clickRestaurantDashboard(){
+      restaurantDashboardButtom().click();
+      return new RestaurantDashboardPage();
+    }
+
+    public GetEatStreetPage clickGetEatStreet(){
+        getEatStreetButtom().click();
+        return new GetEatStreetPage();
+    }
+    public GetHelpPage clickGetHelpButton(){
+        getHelpButton().click();
+        return new GetHelpPage();
+    }
+
+
 }
 
