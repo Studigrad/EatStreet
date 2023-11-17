@@ -9,9 +9,6 @@ import pages.HomePage;
 import pages.SearchPage;
 
 public class FindRestaurantTest extends TestInit{
-    /**
-     * this test enter address in search field and finds all restaurant by that address
-     */
     private HomePage homePage;
     private ModalWindow modal;
     private SearchPage searchPage;
@@ -25,15 +22,33 @@ public class FindRestaurantTest extends TestInit{
     @Test
     public void enterRestaurantAddress(){
         homePage.findInSearchField("Мадисон, Висконсин, США");
-
         modal.clickBtn(modal.getEnterAddressBtn());
         homePage.getFedButton().click();
 
         Assert.assertTrue(searchPage.matchingResult().getText().contains("matching restaurants near you"));
     }
-
     @Test(dependsOnMethods = "enterRestaurantAddress")
-    public void checkChooseRestaurant() throws InterruptedException {
+    public void checkOrderFor() throws InterruptedException {
+        searchPage.clickOrderForRadioBtn(2);
+        Assert.assertTrue(searchPage
+                    .matchingResult()
+                    .getText()
+                    .contains("matching restaurants near you"));
+    }
+    @Test(dependsOnMethods = "checkOrderFor")
+    public void checkFilterSection(){
+        searchPage.clickOrderForRadioBtn(1);
+        searchPage.scroll(150);
+        searchPage.clickFilterBtnByIndex(1);
+        searchPage.clickFilterBtnByIndex(2);
+        searchPage.clickFilterBtnByIndex(3);
+        Assert.assertTrue(searchPage.matchingResult()
+                .getText()
+                .contains("matching"));
+    }
+    @Test(dependsOnMethods = "checkFilterSection")
+    public void checkChooseRestaurant() {
         searchPage.chooseRestaurantByIndex(1);
     }
+
 }
