@@ -48,6 +48,7 @@ public class FindRestaurantTest extends TestInit{
     }
     @Test(dependsOnMethods = "checkFilterSection")
     public void checkChooseRestaurant() {
+        searchPage.scroll(50);
         searchPage.chooseRestaurantByIndex(1);
     }
 
