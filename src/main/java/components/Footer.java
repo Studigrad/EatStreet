@@ -91,10 +91,10 @@ public class Footer extends BasePage {
         return new PrivacyPolicyPage(driver);
     }
 
-    public Footer clickRestaurantTermsBtn() {
+    public  RestaurantTermsPage clickRestaurantTermsBtn() {
         scroll(3000);
         restaurantTermsBtn().click();
-        return this;
+        return new RestaurantTermsPage(driver);
     }
 
     public Footer clickGooglePlayBtn() {

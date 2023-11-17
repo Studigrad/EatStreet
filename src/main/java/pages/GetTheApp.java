@@ -50,23 +50,19 @@ public class GetTheApp extends BasePage{
         iphone().click();
         return this;
     }
-
     public GetTheApp AndroidBtn(){
         android().click();
         return this;
     }
-
     public GetTheApp NotificationBtn(){
         notifications().click();
         return this;
     }
-
     public GetTheApp PhoneNumberBtn(){
         phone().click();
         phone().sendKeys("484 246-7854");
         return this;
     }
-
     public GetTheApp TextLinkBtn(){
         link().click();
         return this;
@@ -80,7 +76,6 @@ public class GetTheApp extends BasePage{
         iphone().click();
         return this;
     }
-
     public GetTheApp GetTextFromAndroid(){
         android().click();
         return this;

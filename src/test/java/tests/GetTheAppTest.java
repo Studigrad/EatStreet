@@ -15,6 +15,10 @@ public class GetTheAppTest extends TestInit{
     Assert.assertEquals(appGet.textVisible(), "Food in a Snap of the App!");
   }
 
+
+
+  
+
   @Test
   public void getAppiPhonebutton(){
     GetTheApp appGet = new GetTheApp(getDriver());

@@ -12,4 +12,8 @@ public class PrivacyPolicyPage extends BasePage {
     public WebElement textEatStreetPrivacyPolicy() {
         return findByXpath("//div[@class='widget-header widget-header--checkout']");
     }
+    public WebElement redFrameInDoNotSellOrShareMyPersonalInformation(){
+        return findByXpath("//p[@class='highlight-section']");
+    }
+
 }
