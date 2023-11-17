@@ -18,8 +18,35 @@ public class SearchPage extends BasePage{
     private List<WebElement> getListOfRestaurants(){
         return findsByXpath("//ul[@class=\"list list--rest-list margin-bottom-20\"]/li");
     }
-
+    private WebElement deliveryRadioBtn(){
+        return findByXpath("//input[@id=\"filters-checkbox-delivery\"]");
+    }
+    private WebElement takeoutRadioBtn(){
+        return findByXpath("//input[@id=\"filters-checkbox-takeout\"]");
+    }
+    private List<WebElement> filterSectionList(){
+        return findsByXpath("//div[@class=\"row filters-section ng-scope\"]/div");
+    }
+    public void clickFilterBtnByIndex(int index){
+        filterSectionList().get(index-1).click();
+    }
     public void chooseRestaurantByIndex(int index){
-        getListOfRestaurants().get(index).click();
+        getListOfRestaurants().get(index-1).click();
+    }
+    public void clickOrderForRadioBtn(int index){
+        switch (index){
+            case 1:
+                deliveryRadioBtn().click();
+                break;
+            case 2:
+                takeoutRadioBtn().click();
+                break;
+            default:
+                if(deliveryRadioBtn().isSelected()){
+                    takeoutRadioBtn().click();
+                }else{
+                    deliveryRadioBtn().click();
+                }
+        }
     }
 }

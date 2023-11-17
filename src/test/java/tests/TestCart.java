@@ -15,5 +15,5 @@ public class TestCart extends TestInit {
             CartPage cartPage = new CartPage(getDriver());
             Assert.assertTrue(cartPage.getCheckCartStatus().isDisplayed());
     }
-
 }
+

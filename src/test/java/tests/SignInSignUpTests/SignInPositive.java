@@ -13,6 +13,7 @@ public class SignInPositive extends TestInit {
         signIn.clickOnMyAccount().click();
         signIn.inputEmailInfield().sendKeys("qaengenering@gmail.com");
         signIn.inputPasswordInfield().sendKeys("QA123456$");
+        signIn.scroll(250);
         signIn.clickOnButtonSignIn().click();
         signIn.clickOnMyAccount2().click();
 
