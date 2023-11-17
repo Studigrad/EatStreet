@@ -12,7 +12,6 @@ public class TestFooter extends TestInit {
         PrivacyPolicyPage privacyPolicyPage = new PrivacyPolicyPage(getDriver());
         footer.scroll(3000);
         footer.clickPrivacyPolicyBtn();
-      
         Assert.assertTrue(privacyPolicyPage.textEatStreetPrivacyPolicy().getText().contains("EatStreet Privacy Policy"));
     }
 }
