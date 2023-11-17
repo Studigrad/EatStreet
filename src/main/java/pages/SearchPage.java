@@ -42,19 +42,16 @@ public class SearchPage extends BasePage{
         sortByElementsList().get(index-1).click();
     }
     public void clickOrderForRadioBtn(int index){
-        switch (index){
-            case 1:
-                deliveryRadioBtn().click();
-                break;
-            case 2:
-                takeoutRadioBtn().click();
-                break;
-            default:
-                if(deliveryRadioBtn().isSelected()){
+        switch (index) {
+            case 1 -> deliveryRadioBtn().click();
+            case 2 -> takeoutRadioBtn().click();
+            default -> {
+                if (deliveryRadioBtn().isSelected()) {
                     takeoutRadioBtn().click();
-                }else{
+                } else {
                     deliveryRadioBtn().click();
                 }
+            }
         }
     }
 }
