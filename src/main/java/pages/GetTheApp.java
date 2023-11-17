@@ -25,9 +25,9 @@ public class GetTheApp extends BasePage{
 
 
 
-   private WebElement site(){
+    private WebElement site(){
         return findByXpath("//a[text()='Get The App']");
-   }
+    }
     private WebElement iphone(){
         return findByXpath("//label[@class='label-ios']");
     }
@@ -41,7 +41,7 @@ public class GetTheApp extends BasePage{
         return findByXpath("//a[text()='Text Android Link']").getText();
     }
     public String textVisible(){
-     return findByXpath("//header[text()='Food in a Snap of the App!']").getText();
+        return findByXpath("//header[text()='Food in a Snap of the App!']").getText();
     }
 
 
@@ -71,14 +71,6 @@ public class GetTheApp extends BasePage{
         link().click();
         return this;
     }
-
-
-
-
-
-
-
-
     public GetTheApp Opensite(){
         scroll(470);
         site().click();
