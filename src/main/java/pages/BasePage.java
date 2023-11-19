@@ -36,4 +36,11 @@ public class BasePage {
         js.executeScript("window.scrollBy(0," + pixels + ")", "");
     }
 
+    public WebElement findByCSS(String path) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(path)));
+    }
+
+    public List<WebElement> findsByCSS(String path) {
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector(path)));
+    }
 }
