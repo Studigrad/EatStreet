@@ -1,11 +1,13 @@
 package pages;
 
+import components.Header;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
 public class HomePage extends BasePage {
+    private Header header;
     public HomePage(WebDriver driver) {
         super(driver);
     }
@@ -44,10 +46,6 @@ public class HomePage extends BasePage {
 
     public WebElement enterYourEmailAddressField() {
         return findByXpath("//input[@id=\"new-email\"]");
-    }
-
-    public WebElement signUpButton() {
-        return findByXpath("//button[@type=\"submit\"]");
     }
 
     public WebElement searchField() {
