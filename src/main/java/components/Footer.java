@@ -90,22 +90,22 @@ public class Footer extends BasePage {
         return new PrivacyPolicyPage(driver);
     }
 
-    public Footer clickRestaurantTermsBtn() {
+    public  RestaurantTermsPage clickRestaurantTermsBtn() {
         scroll(3000);
         restaurantTermsBtn().click();
-        return this;
+        return new RestaurantTermsPage(driver);
     }
 
-    public Footer clickGooglePlayBtn() {
+    public GooglePlayPage clickGooglePlayBtn() {
         scroll(3000);
         googlePlayBtn().click();
-        return this;
+        return new GooglePlayPage(driver);
     }
 
-    public Footer clickAppStoreBtn() {
+    public AppStorePage clickAppStoreBtn() {
         scroll(3000);
         appStoreBtn().click();
-        return this;
+        return new AppStorePage(driver);
     }
 
     public WebElement getBtnAboutUs() {
