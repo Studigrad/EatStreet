@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import pages.*;
 import pages.footerPages.*;
 
-
 public class Footer extends BasePage {
 
     public Footer(WebDriver driver) {
@@ -107,6 +106,16 @@ public class Footer extends BasePage {
         scroll(3000);
         appStoreBtn().click();
         return new AppStorePage(driver);
+    }
+
+    public WebElement getBtnAboutUs() {
+        return findByXpath("//a[@ui-sref='about-us']");
+    }
+
+    public Footer clickAboutUsBtn() {
+        scroll(3000);
+        getBtnAboutUs().click();
+        return this;
     }
 }
 
