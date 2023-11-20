@@ -39,4 +39,35 @@ public class Restaurants extends BasePage{
         List<WebElement> elements = findsByXpath("//div[@class='es-star es-star__4']");
         return elements.size();
     }
+    public WebElement deliveryIsFree(){
+        return findByXpath("//span[@class='earn_free-delivery ng-binding ng-scope']");
+    }
+    public List<WebElement> chooseASauceRadioButtons(){
+        return findsByXpath("//div[@class='options-radio-buttons-items radio ng-scope']");
+    }
+    public void clickChooseASauceRadioButtons(int index){
+        chooseASauceRadioButtons().get(index - 1).click();
+    }
+    // Plus and minus in Quantity
+    public WebElement plusGoodsButton(int numberOfClicksPlus) {
+        for (int i = 0; i < numberOfClicksPlus; i++) {
+            WebElement addButton = findByXpath("//button[@id='quantity--adds']");
+            addButton.click();
+        }
+        return findByXpath("//button[@id='quantity--adds']");
+    }
+    public WebElement minusGoodsButton(int numberOfClicksMinus){
+        for (int i = 0; i < numberOfClicksMinus; i++) {
+            WebElement addButton = findByXpath("//button[@ng-click='1 < product.qty && changeQuantity(product, -1)']");
+            addButton.click();
+        }
+        return findByXpath("//button[@ng-click='1 < product.qty && changeQuantity(product, -1)']");
+    }
+    //
+    public WebElement addToCartButton(){
+        return findByXpath("//a[@id='confirm-options']");
+    }
+    public WebElement youveEarnedFreeDeliveryStatus(){
+        return findByXpath("//span[@class='earn_free-delivery ng-binding ng-scope']/b");
+    }
 }
