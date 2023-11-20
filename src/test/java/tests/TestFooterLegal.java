@@ -50,5 +50,6 @@ public class TestFooterLegal extends TestInit {
 
         Assert.assertTrue(restaurantTermsPage.textRestaurantTerms().getText().contains("EatStreet Merchant Terms And Conditions"));
     }
+
 }
 
