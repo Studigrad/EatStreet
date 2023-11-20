@@ -1,5 +1,6 @@
 package tests;
 
+import components.Header;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CartPage;
@@ -12,16 +13,16 @@ public class TestCart extends TestInit {
         HomePage page = new HomePage(getDriver());
         page.navigate("https://eatstreet.com/");
         Assert.assertTrue(page.getCheckCart().isDisplayed());
-
-        page.getCheckCart().click();
+        Header header = new Header(getDriver());
+        header.getCartBtn().click();
         CartPage cartPage = new CartPage(getDriver());
         Assert.assertTrue(cartPage.getCheckCartStatus().isDisplayed());
     }
 
     @Test
     public void checkDelivery() {
-        HomePage page = new HomePage(getDriver());
-        page.getCheckCart().click();
+        Header header = new Header(getDriver());
+        header.getCartBtn().click();
         CartPage cartPage = new CartPage(getDriver());
         cartPage.getCheckDelivery().click();
         Assert.assertTrue(cartPage.getCheckDelivery().isDisplayed());
