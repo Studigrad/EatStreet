@@ -6,6 +6,7 @@ import pages.CartPage;
 import pages.HomePage;
 
 public class TestCart extends TestInit {
+
     @Test
     public void checkCart() {
         HomePage page = new HomePage(getDriver());
@@ -134,5 +135,6 @@ public class TestCart extends TestInit {
 //        HomePage HomePage = new HomePage(getDriver());
 //
 //    }
+
 }
 

@@ -1,20 +1,19 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-import java.util.List;
 
 public class CartPage extends BasePage {
+
+
+
 
 
     public CartPage(WebDriver driver) {
         super(driver);
     }
+
 
     public void navigate(String link) {
         driver.get(link);
@@ -24,9 +23,6 @@ public class CartPage extends BasePage {
         return elementByXpath("//div[@title='Click here to view your cart.']");
     }
 
-    public WebElement getCheckCartStatus() {
-        return elementByXpath("//p[@class='cart-empty-text font-family-museo-slab font-size-16']");
-    }
 
     public WebElement getCheckDelivery() {
         return elementByXpath("//div/label[@id='delivery-checkbox']");
@@ -84,14 +80,23 @@ public class CartPage extends BasePage {
         return elementByXpath("//div/button[@id='continue']");
     }
 
-    //public WebElement getEnter
+
     public WebElement elementByXpath(String locator) {
         return findByXpath(locator);// елемент
     }
 
 
-    public WebElement clickOnButton() {
-        return elementByXpath("//A[@class]");
+
+
+
+
+    public WebElement getCheckCartStatus(){
+        return findByXpath("//p[@class='cart-empty-text font-family-museo-slab font-size-16']");
+    }
+
+
+    public WebElement clickOnButton(){
+        return findByXpath("//A[@class]");
     }
 
 

@@ -1,10 +1,9 @@
 package components;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.*;
+import pages.footerPages.*;
 
 
 public class Footer extends BasePage {
@@ -31,18 +30,20 @@ public class Footer extends BasePage {
 
     public CustomersPage clickforCustomers() {
         forCustomersButtom().click();
-        return new CustomersPage();
+        return new CustomersPage(driver);
     }
 
-    public RestaurantDashboardPage clickRestaurantDashboard(){
-      restaurantDashboardButtom().click();
-      return  new RestaurantDashboardPage();
+    public RestaurantDashboardPage clickRestaurantDashboard() {
+        restaurantDashboardButtom().click();
+        return new RestaurantDashboardPage();
     }
-    public GetEatStreetPage clickGetEatStreet(){
+
+    public GetEatStreetPage clickGetEatStreet() {
         getEatStreetButtom().click();
         return new GetEatStreetPage();
     }
-    public GetHelpPage clickGetHelpButton(){
+
+    public GetHelpPage clickGetHelpButton() {
         getHelpButton().click();
         return new GetHelpPage();
     }
@@ -72,28 +73,38 @@ public class Footer extends BasePage {
         return findByXpath("//a[@class='app-btn-iphone']");
     }
 
-    public Footer clikPrivacyPolicyBtn() {
+    public PrivacyPolicyPage clickPrivacyPolicyBtn() {
+        scroll(3000);
         privacyPolicyBtn().click();
-        return this;
+        return new PrivacyPolicyPage(driver);
     }
 
-    public Footer clikTermsOfUseBtn() {
+    public TermsOfUsePage clickTermsOfUseBtn() {
+        scroll(3000);
         termsOfUseBtn().click();
-        return this;
+        return new TermsOfUsePage(driver);
     }
-    public Footer clikDoNotSellOrShareMyPersonalInformationBtn() {
+
+    public PrivacyPolicyPage clickDoNotSellOrShareMyPersonalInformationBtn() {
+        scroll(3000);
         doNotSellOrShareMyPersonalInformationBtn().click();
-        return this;
+        return new PrivacyPolicyPage(driver);
     }
-    public Footer clikRestaurantTermsBtn() {
+
+    public  RestaurantTermsPage clickRestaurantTermsBtn() {
+        scroll(3000);
         restaurantTermsBtn().click();
-        return this;
+        return new RestaurantTermsPage(driver);
     }
-    public Footer clikGooglePlayBtn() {
+
+    public Footer clickGooglePlayBtn() {
+        scroll(3000);
         googlePlayBtn().click();
         return this;
     }
-    public Footer clikAppStoreBtn() {
+
+    public Footer clickAppStoreBtn() {
+        scroll(3000);
         appStoreBtn().click();
         return this;
     }
