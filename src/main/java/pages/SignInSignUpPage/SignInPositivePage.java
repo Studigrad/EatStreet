@@ -33,4 +33,12 @@ public class SignInPositivePage extends BasePage {
     public WebElement clickOnMyAccount2() {
         return findByXpath("//a[@id='menu-my-account']");
     }
+
+    public void loginWithValidData() {
+        clickOnMyAccount().click();
+        inputEmailInfield().sendKeys("qaengenering@gmail.com");
+        inputPasswordInfield().sendKeys("QA123456$");
+        clickOnButtonSignIn().click();
+        clickOnMyAccount2().click();
+    }
 }
