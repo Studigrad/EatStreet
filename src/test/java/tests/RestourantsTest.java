@@ -32,11 +32,10 @@ public class RestourantsTest extends TestInit{
         this.restaurantPage = new RestaurantPage(driver);
 
         homePage.gotItButton().click();
-        homePage.clickCityList(6);
-        restaurantPage.clickListAllRestaurants(3);
+        homePage.clickCityList(1);
+        restaurantPage.clickListAllRestaurants(1);
         searchPage.getRestaurantByIndex(1).click();
     }
-
     @Test
     public void testRestaurantsIsClosed(){
         String actualText = restaurants.statusRestaurants().getText();
@@ -44,11 +43,22 @@ public class RestourantsTest extends TestInit{
 
         Assert.assertEquals(actualText,expectedText);
     }
-
     @Test
     public void testRatingMostlyFour() {
         int expectedNumberOfElements = 4;
 
         Assert.assertEquals(restaurants.ratingIsFourStar(), expectedNumberOfElements, "Rating is not mostly four!");
+    }
+    @Test
+    public void testYouOrderIsFree(){
+        String expectedText = "FREE DELIVERY";
+
+        restaurants.clickMenuList(2);
+//        restaurants.clickChooseASauceRadioButtons(2);
+        restaurants.plusGoodsButton(4);
+        restaurants.addToCartButton().click();
+        String actualText = restaurants.youveEarnedFreeDeliveryStatus().getText();
+
+        Assert.assertEquals(actualText,expectedText);
     }
 }
